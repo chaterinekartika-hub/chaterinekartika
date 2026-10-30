@@ -153,11 +153,12 @@ body {
   opacity: 0.7;
 }
 
+
 .banner-container {
   position: relative;
   width: 90%;
   max-width: 1200px;
-  margin: 30px auto 40px auto; 
+  margin: 30px auto 40px auto;
 }
 
 .banner-slider {
@@ -165,8 +166,8 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: none; 
-  border-radius: 24px; 
+  scrollbar-width: none;
+  border-radius: 24px;
   box-shadow: 0 10px 25px rgba(247, 194, 212, 0.35);
 }
 
@@ -188,16 +189,15 @@ body {
   max-height: 420px;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
 }
 
 .slider-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85); 
-  backdrop-filter: blur(4px); 
-  color: #8c688e; 
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  color: #8c688e;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -213,13 +213,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.slider-arrow:hover {
-  background-color: #8c688e;
-  color: #ffffff;
-  border-color: #8c688e;
-  transform: translateY(-50%) scale(1.1);
-}
-
 .arrow-left {
   left: 20px;
 }
@@ -228,9 +221,16 @@ body {
   right: 20px;
 }
 
+.slider-arrow:hover {
+  background-color: #8c688e;
+  color: #ffffff;
+  border-color: #8c688e;
+  transform: translateY(-50%) scale(1.1);
+}
+
 .banner-caption {
   position: absolute;
-  bottom: 40px;
+  bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -262,13 +262,6 @@ body {
     width: 92%;
     margin: 20px auto;
   }
-  .banner-caption {
-    bottom: 20px;
-  }
-  .banner-buy-btn {
-    padding: 8px 18px;
-    font-size: 12px
-  }
   
   .slide img {
     max-height: 220px;
@@ -286,6 +279,15 @@ body {
   
   .arrow-right {
     right: 10px;
+  }
+
+  .banner-caption {
+    bottom: 20px;
+  }
+
+  .banner-buy-btn {
+    padding: 8px 18px;
+    font-size: 12px;
   }
 }
 
