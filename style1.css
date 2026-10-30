@@ -155,9 +155,9 @@ body {
 
 .banner-container {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto 40px auto; 
 }
 
 .banner-slider {
@@ -165,48 +165,59 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
+  border-radius: 24px; 
+  box-shadow: 0 10px 25px rgba(247, 194, 212, 0.35);
 }
 
 .banner-slider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .slide img {
   width: 100%;
   height: auto;
+  max-height: 420px;
   object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
 .slider-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #333;
-  width: 40px;
-  height: 40px;
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(4px); 
+  color: #8c688e; 
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 18px;
-  border: none;
-  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f7e2eb;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .slider-arrow:hover {
-  background-color: #ffffff;
+  background-color: #8c688e;
+  color: #ffffff;
+  border-color: #8c688e;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .arrow-left {
@@ -215,6 +226,31 @@ body {
 
 .arrow-right {
   right: 20px;
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    width: 92%;
+    margin: 20px auto;
+  }
+  
+  .slide img {
+    max-height: 220px;
+  }
+
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .arrow-left {
+    left: 10px;
+  }
+  
+  .arrow-right {
+    right: 10px;
+  }
 }
 
 .about-section {
